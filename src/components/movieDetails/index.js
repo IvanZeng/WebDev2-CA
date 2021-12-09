@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useEffect, useState }  from "react";
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
@@ -10,6 +10,10 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import MovieReviews from "../movieReviews"
+import { getSimilarMovies } from "../../api/tmdb-api";
+import { Link } from "react-router-dom";
+import SimilarMoviesPage from "../../pages/similarMoviesPage";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,11 +32,24 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
+  fab1:{
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(18),
+  },
 }));
 
 const MovieDetails = ({ movie }) => {  // Don't miss this!
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [similar, setSimilar] = useState([]);
+
+  // useEffect(() => {
+  //   getSimilarMoviesPage(movie.id).then((similar) => {
+  //     setSimilar(similar);
+  //   });
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <>
@@ -54,6 +71,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           </li>
         ))}
       </Paper>
+
       <Paper component="ul" className={classes.root}>
         <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
         <Chip
@@ -76,25 +94,34 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
             <Chip label={c.iso_3166_1} className={classes.chip} />
             <Chip label={c.name} className={classes.chip} />         
           </li>
-
         ))}
       </Paper>
 
-
-
-      <Fab
-        color="secondary"
-        variant="extended"
-        onClick={() =>setDrawerOpen(true)}
-        className={classes.fab}
-      >
-        <NavigationIcon />
-        Reviews
+      <Fab color="secondary" variant="extended" onClick={() =>setDrawerOpen(true)} className={classes.fab}>
+      <NavigationIcon/> Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <MovieReviews movie={movie} />
+      <MovieReviews movie={movie} />
       </Drawer>
-    </>
+
+      {/* {similar.map((r) => ( */}
+      <Fab color="primary" variant="extended" className={classes.fab1} >
+      <Link
+                  to={{
+                    pathname: `/similar/${movie.id}`,
+                    // state: {
+                    //   similar: r,
+                    //   movie: movie,
+                    // },
+                  }}
+                >
+
+      <NavigationIcon/> Similar Moives
+      </Link>
+      </Fab>
+      </>
+      
+  
   );
 };
 export default  MovieDetails ;

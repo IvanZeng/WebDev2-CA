@@ -6,6 +6,15 @@ const MoviesContextProvider = (props) => {
   const [myReviews, setMyReviews] = useState( {} ) 
   const [favorites, setFavorites] = useState( [] )
   const [towatches, setTowatches] = useState( [] )
+  const [similar, setSimilar] = useState( [] )
+
+  // const similarMovies = (movie) => {
+  //   let newSimilar = [];
+  //   if (!similar.includes(movie.id)){
+  //     newSimilar = [...similar, movie.id];
+  //   }
+  //   setSimilar(newSimilar)
+  // };
 
   const addToFavorites = (movie) => {
     let newFavorites = [];
@@ -50,6 +59,7 @@ const MoviesContextProvider = (props) => {
         removeFromFavorites,
         removeFromMustWatches,
         addReview,
+        //similarMovies,
       }}
     >
       {props.children}
