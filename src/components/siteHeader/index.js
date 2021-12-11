@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+
   offset: theme.mixins.toolbar,
+  
 }));
 
 const SiteHeader = ( { history }) => {
@@ -48,7 +50,7 @@ const SiteHeader = ( { history }) => {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary">
+      <AppBar position="fixed" color="primary">
         <Toolbar>
           <Typography variant="h4" className={classes.title}>
             TMDB Client

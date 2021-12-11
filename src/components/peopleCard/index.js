@@ -47,7 +47,7 @@ const useStyles = makeStyles({
            </Grid>
            <Link to={`/people/${people.id}`}>
           <Button variant="outlined" size="medium" color="primary">
-            More Info ...
+          More Informaiton
           </Button>
         </Link>
 
