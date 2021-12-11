@@ -6,7 +6,7 @@ import {getTopRatedMovies} from '../api/tmdb-api'
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 
 const TopRatedMoviesPage = (props) => {
-    const {  data, error, isLoading, isError }  = useQuery('discover3', getTopRatedMovies)
+    const {  data, error, isLoading, isError }  = useQuery('topRated', getTopRatedMovies)
   
     if (isLoading) {
       return <Spinner />

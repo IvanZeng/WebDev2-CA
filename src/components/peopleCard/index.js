@@ -41,7 +41,7 @@ const useStyles = makeStyles({
             <Grid item xs={6}>
              <Typography variant="h6" component="p">
                <StarRateIcon fontSize="small" />
-               {"  "} {people.popularity} {" "}
+               {"  "} {people.popularity}{" "}
              </Typography>
             </Grid>
            </Grid>

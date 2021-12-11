@@ -17,6 +17,7 @@ import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage";
 import SimilarMoviesPage from "./pages/similarMoviesPage";
 import PopularPeoplePage from './pages/popularPeoplePage';
 import PeopleDetailsPage from './pages/peopleDetailsPage'
+import PopularMoviesPage from './pages/popularMoviesPage';
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
           <Switch>
         <Route path="/people/:id" component={PeopleDetailsPage} />
         <Route path="/similar/:id" component={SimilarMoviesPage} />
+        <Route exact path="/movies/popular" component={PopularMoviesPage} />
         <Route exact path="/popular/people" component={PopularPeoplePage} />
         <Route exact path="/movies/nowplaying" component={NowPlayingMoviesPage} />
         <Route exact path="/movies/toprated" component={TopRatedMoviesPage} />
