@@ -125,20 +125,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       <NavigationIcon/> Similar Moives
       </Link>
       </Fab>
-
-      <Fab color="primary" variant="extended" className={classes.fab2} >
-      <Link
-                  to={{
-                    pathname: `/creadits/${movie.id}`,
-                  }}
-                >
-
-      <NavigationIcon/> Moive Creadits
-      </Link>
-      </Fab>
       </>
-      
-  
   );
 };
 export default  MovieDetails ;
