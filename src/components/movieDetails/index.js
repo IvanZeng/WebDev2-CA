@@ -37,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(2),
     right: theme.spacing(18),
   },
+  fab2:{
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(42),
+  }
 }));
 
 const MovieDetails = ({ movie }) => {  // Don't miss this!
@@ -104,7 +109,8 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
       <MovieReviews movie={movie} />
       </Drawer>
 
-      {/* {similar.map((r) => ( */}
+      
+
       <Fab color="primary" variant="extended" className={classes.fab1} >
       <Link
                   to={{
@@ -117,6 +123,17 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
                 >
 
       <NavigationIcon/> Similar Moives
+      </Link>
+      </Fab>
+
+      <Fab color="primary" variant="extended" className={classes.fab2} >
+      <Link
+                  to={{
+                    pathname: `/creadits/${movie.id}`,
+                  }}
+                >
+
+      <NavigationIcon/> Moive Creadits
       </Link>
       </Fab>
       </>
