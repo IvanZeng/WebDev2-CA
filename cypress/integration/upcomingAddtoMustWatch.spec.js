@@ -26,7 +26,7 @@ let upComing ;
           cy.get(".MuiCardActions-root").eq(5).contains("More Info").click({force: true});
           cy.url().should("include", `/movies/${upComing[5].id}`);
           cy.get("h3").contains(upComing[5].title);
-          
+          cy.get("a").contains("Similar").click({force: true});
         });
 });
 });
