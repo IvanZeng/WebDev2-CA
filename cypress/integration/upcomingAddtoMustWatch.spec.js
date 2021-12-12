@@ -1,6 +1,6 @@
 let upComing ;
 
-  describe("Top Rated Page ", () => {
+  describe("Upcoming Page ", () => {
     before(() => {
       // Get movies from TMDB and store in movies variable.
       cy.request(
