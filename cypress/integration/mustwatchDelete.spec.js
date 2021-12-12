@@ -21,6 +21,7 @@ let upComing ;
           cy.get("button[aria-label='add to watch']").eq(2).click({force: true});
           cy.get("header").find(".MuiToolbar-root").find("button").eq(3).click({force: true});
           cy.get("button[aria-label='remove from must watch']").eq(0).click({force: true});
+          cy.get("header").find(".MuiToolbar-root").find("button").eq(3).click({force: true});
         }); 
 });
 });
