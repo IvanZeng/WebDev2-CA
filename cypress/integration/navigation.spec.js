@@ -95,4 +95,46 @@ describe("Navigation", () => {
         cy.get("h3").contains(movies[0].title);
       });
   });
+
+  describe("From the top rated page", () => {
+    it("should navigate to the movie details page and change browser URL", () => {
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(4).click({force: true});
+      cy.url().should("include", `/movies/toprated`);
+      cy.get("h3").contains("Top Rated");
+    });
+  });
+
+  describe("From the now playing page", () => {
+    it("should navigate to the movie details page and change browser URL", () => {
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(5).click({force: true});
+      cy.url().should("include", `/movies/nowplaying`);
+      cy.get("h3").contains("Now Playing");
+    });
+  });
+
+  describe("From the popular page", () => {
+    it("should navigate to the movie details page and change browser URL", () => {
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(6).click({force: true});
+      cy.url().should("include", `/movies/popular`);
+      cy.get("h3").contains("Popular");
+    });
+  });
+
+  describe("From the people page", () => {
+    let searchString = "je";
+    it("should navigate to the movie details page and change browser URL", () => {
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(7).click({force: true});
+      cy.url().should("include", `/popular/people`);
+      cy.get("h3").contains("Actors");
+      cy.get("#filled-search").clear({force: true}).type(searchString);
+    });
+  });
+
+  describe("From the login page", () => {
+    it("should navigate to the movie details page and change browser URL", () => {
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(8).click({force: true});
+    });
+  });
+
+
 });
