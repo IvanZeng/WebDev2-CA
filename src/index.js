@@ -18,8 +18,10 @@ import SimilarMoviesPage from "./pages/similarMoviesPage";
 import PopularPeoplePage from './pages/popularPeoplePage';
 import PeopleDetailsPage from './pages/peopleDetailsPage'
 import PopularMoviesPage from './pages/popularMoviesPage';
-
-
+import SignUpPage from "./pages/signUpPage";
+import LogInPage from "./pages/logInPage";
+import "bootstrap/dist/css/bootstrap.min.css"
+import { makeStyles } from "@material-ui/core/styles";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +41,8 @@ const App = () => {
         <MoviesContextProvider>
             {" "}
           <Switch>
+        <Route exact path="/signUp" component={SignUpPage} />
+        <Route exact path="/logIn" component={LogInPage} />
         <Route path="/people/:id" component={PeopleDetailsPage} />
         <Route path="/similar/:id" component={SimilarMoviesPage} />
         <Route exact path="/movies/popular" component={PopularMoviesPage} />

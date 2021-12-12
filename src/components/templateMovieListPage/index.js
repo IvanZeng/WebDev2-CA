@@ -21,7 +21,6 @@ function MovieListPageTemplate({ movies, title, action }) {
       return m.title.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })
 
-
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
   };
