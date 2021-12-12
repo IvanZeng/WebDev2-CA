@@ -24,7 +24,6 @@ const useStyles = makeStyles({
   export default function PeopleCard({ people }) {
     const classes = useStyles();
 
-    
     return (
         <Card className={classes.card}>
           <CardHeader className={classes.header} title={people.name} />
