@@ -1,10 +1,7 @@
 // import React from "react";
 import React, { useEffect, useState }  from "react";
 import PageTemplate from "../components/templateMovieListPage";
-import { useQuery } from 'react-query'
-import Spinner from '../components/spinner'
 import {getSimilarMovies} from '../api/tmdb-api'
-import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import { withRouter } from "react-router-dom";
 
 // const SimilarMoviesPage = (props) => {
