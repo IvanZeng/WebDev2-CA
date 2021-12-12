@@ -37,7 +37,7 @@ describe("Base test", () => {
      it("should only display movies with m in the title", () => {
        let searchString = "m";
        let matchingMovies = filterByTitle(movies, searchString);
-       cy.get("#filled-search").clear().type(searchString); // Enter m in text box
+       cy.get("#filled-search").clear({force: true}).type(searchString); // Enter m in text box
        cy.get(".MuiCardHeader-content").should(
          "have.length",
          matchingMovies.length
@@ -49,7 +49,7 @@ describe("Base test", () => {
      it("should only display movies with o in the title", () => {
        let searchString = "o";
        let matchingMovies = filterByTitle(movies, searchString);
-       cy.get("#filled-search").clear().type(searchString); // Enter o in text box
+       cy.get("#filled-search").clear({force: true}).type(searchString); // Enter o in text box
        cy.get(".MuiCardHeader-content").should(
          "have.length",
          matchingMovies.length
@@ -61,7 +61,7 @@ describe("Base test", () => {
      it("the exceptional case with no matches", () => {
         let searchString = "xyz";
         let matchingMovies = filterByTitle(movies, searchString);
-        cy.get("#filled-search").clear().type(searchString); // Enter xyz in text box
+        cy.get("#filled-search").clear({force: true}).type(searchString); // Enter xyz in text box
         cy.get(".MuiCardHeader-content").should(
           "have.length",
           matchingMovies.length
@@ -77,8 +77,8 @@ describe("Base test", () => {
        const selectedGenreText = "Comedy";
        const matchingMovies = filterByGenre(movies, selectedGenreId);
        cy.get("#filled-search").clear();
-       cy.get("#genre-select").click();
-       cy.get("li").contains(selectedGenreText).click();
+       cy.get("#genre-select").click({force: true});
+       cy.get("li").contains(selectedGenreText).click({force: true});
        cy.get(".MuiCardHeader-content").should(
          "have.length",
          matchingMovies.length
@@ -95,9 +95,9 @@ describe("Base test", () => {
        const selectedGenreId = 35;
        const selectedGenreText = "Comedy";
        const matchingMovies = filterByGenre(matchingTitleMovies, selectedGenreId);
-       cy.get("#filled-search").clear().type(searchString); // Enter f in text box
+       cy.get("#filled-search").clear({force: true}).type(searchString); // Enter f in text box
        cy.get("#genre-select").click();
-       cy.get("li").contains(selectedGenreText).click();
+       cy.get("li").contains(selectedGenreText).click({force: true});
        cy.get(".MuiCardHeader-content").should(
         "have.length",
         matchingMovies.length
@@ -111,15 +111,13 @@ describe("Base test", () => {
 
    describe("Add to favorite", () => {
     beforeEach(() => {
-      cy.get("#filled-search").clear();
-      cy.get("#genre-select").click();
-      cy.get("li").contains("All").click();
-      cy.get("button[aria-label='add to favorites']").eq(0).click();
-      cy.get("button[aria-label='add to favorites']").eq(1).click();
+      cy.get("button[aria-label='add to favorites']").eq(0).click({force: true});
+      cy.get("button[aria-label='add to favorites']").eq(1).click({force: true});
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(7).click({force: true});
     });
     it("It should display an avatar at the top of the movie card and add it to the Favourite movies page. ", () => {
       cy.get(".MuiCardHeader-avatar");
-      cy.get("header").find(".MuiToolbar-root").find("button").eq(2).click();
+      cy.get("header").find(".MuiToolbar-root").find("button").eq(2).click({force: true});
       cy.get("p").contains(movies[0].title);
       cy.get("p").contains(movies[1].title);
     });
