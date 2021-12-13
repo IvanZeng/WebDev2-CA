@@ -101,3 +101,31 @@ Login and SignUp. Firebase authentication.
 ## Independent learning (If relevant).
 
 https://firebase.google.com/docs/web/setup?authuser=0
+
+
+
+# Assignment 1 - Agile Software Practice
+
+## Overview
+
+Testing ReactJS App.
+
+## E2E Testing
+
+![ ](./images/trTesting.png)
+
+>Tesing Top Rated Page.
+
+## Bundling & Code Splitting
+
+![ ](./images/bundling.png)
+
+>App Bundling.
+
+![ ](./images/splitting.png)
+
+>Code splitting.
+
+## Bundling & Code Splitting
+
+>https://gitlab.com/IvanZeng1/moviesapp-ca-ci/-/pipelines
