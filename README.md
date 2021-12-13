@@ -126,6 +126,6 @@ Testing ReactJS App.
 
 >Code splitting.
 
-## Bundling & Code Splitting
+## CI/CD
 
 >https://gitlab.com/IvanZeng1/moviesapp-ca-ci/-/pipelines
