@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "server": "http-server ./build -p 8080 -P http://localhost:8080?"
   },
   "eslintConfig": {
     "extends": [
