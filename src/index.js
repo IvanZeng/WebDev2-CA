@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
@@ -21,7 +21,7 @@ import PopularMoviesPage from './pages/popularMoviesPage';
 import SignUpPage from "./pages/signUpPage";
 import LogInPage from "./pages/logInPage";
 import "bootstrap/dist/css/bootstrap.min.css"
-import { makeStyles } from "@material-ui/core/styles";
+
 
 const queryClient = new QueryClient({
   defaultOptions: {

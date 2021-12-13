@@ -4,8 +4,6 @@ import FilterCard from "../filterPeopleCard";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import PeopleList from "../peopleList";
-import Typography from "@material-ui/core/Typography";
-import StarRateIcon from "@material-ui/icons/StarRate";
 
 const useStyles = makeStyles({
     root: {

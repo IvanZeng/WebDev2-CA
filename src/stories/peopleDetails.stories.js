@@ -1,7 +1,7 @@
 import React from "react";
 import PeopleDetails from "../components/peopleDetails";
 import SamplePeople from "./samplePeopleData";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 
 export default {
   title: "Actors Page/PeopleDetails",

@@ -1,7 +1,7 @@
 import React from "react";
 import PeopleCard from "../components/peopleCard";
 import SamplePeople from "./samplePeopleData";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import MoviesContextProvider from "../contexts/moviesContext";
 
 export default {

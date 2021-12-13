@@ -1,8 +1,7 @@
 import React from "react";
 import PeopleList from "../components/peopleList";
 import SamplePeople from "./samplePeopleData";
-import { MemoryRouter } from "react-router";
-import { action } from "@storybook/addon-actions";
+import { MemoryRouter } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 
 export default {

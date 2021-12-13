@@ -6,7 +6,6 @@ const MoviesContextProvider = (props) => {
   const [myReviews, setMyReviews] = useState( {} ) 
   const [favorites, setFavorites] = useState( [] )
   const [towatches, setTowatches] = useState( [] )
-  const [similar, setSimilar] = useState( [] )
 
   // const similarMovies = (movie) => {
   //   let newSimilar = [];

@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React, { useState }  from "react";
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
@@ -10,9 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import MovieReviews from "../movieReviews"
-import { getSimilarMovies } from "../../api/tmdb-api";
 import { Link } from "react-router-dom";
-import SimilarMoviesPage from "../../pages/similarMoviesPage";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -95,7 +93,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           <Chip label="Production Countries" className={classes.chip} color="primary" />
         </li>
         {movie.production_countries.map((c) => (
-          <li key={c.name, c.iso_3166_1}>
+          <li key={c.name}>
             <Chip label={c.iso_3166_1} className={classes.chip} />
             <Chip label={c.name} className={classes.chip} />         
           </li>
