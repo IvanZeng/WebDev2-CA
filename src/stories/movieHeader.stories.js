@@ -1,7 +1,7 @@
 import React from "react";
 import MovieHeader from "../components/headerMovie";
 import SampleMovie from "./sampleData";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { action } from "@storybook/addon-actions";
 
 export default {

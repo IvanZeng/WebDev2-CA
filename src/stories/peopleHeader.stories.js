@@ -1,7 +1,7 @@
 import React from "react";
 import PeopleHeader from "../components/headerPeople";
 import SamplePeople from "./samplePeopleData";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { action } from "@storybook/addon-actions";
 
 export default {

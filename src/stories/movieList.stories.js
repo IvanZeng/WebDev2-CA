@@ -1,7 +1,7 @@
 import React from "react";
 import MovieList from "../components/movieList";
 import SampleMovie from "./sampleData";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 import Grid from "@material-ui/core/Grid";

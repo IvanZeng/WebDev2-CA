@@ -1,6 +1,6 @@
 import React from "react";
 import FilterPeopleCard from "../components/filterPeopleCard";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { action } from "@storybook/addon-actions";
 import { QueryClientProvider, QueryClient } from "react-query";
 
