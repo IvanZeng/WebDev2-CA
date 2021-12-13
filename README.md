@@ -15,9 +15,13 @@ Name: [QI ZENG]
 ## Setup requirements.
 
 npm install
+
 npm install bootstrap
+
 npm install react-bootstrap
+
 npm install firebase
+
 npm run storybook
 
 ## API endpoints.
