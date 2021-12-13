@@ -43,8 +43,8 @@ const PopularMoviesPage = lazy(() => import("./pages/popularMoviesPage"));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1,
-      refetchInterval: 1, 
+      staleTime: 36000,
+      refetchInterval: 36000, 
       refetchOnWindowFocus: false
     },
   },

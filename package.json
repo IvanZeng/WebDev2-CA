@@ -16,7 +16,7 @@
     "react-hook-form": "^3.29.4",
     "react-query": "^3.13.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "4.0.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook -s public",
-    "server": "http-server ./build -p 8080 -P http://localhost:8080?"
+    "server": "http-server ./build -p 8080 -P http://localhost:8080? "
   },
   "eslintConfig": {
     "extends": [
@@ -53,9 +53,10 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^4.0.0",
+    "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
     "cypress": "^9.1.1",
-    "http-server": "^13.0.2"
+    "http-server": "^13.0.2",
+    "start-server-and-test": "^1.14.0"
   }
 }
