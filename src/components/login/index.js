@@ -31,7 +31,7 @@ export default function LogInForm() {
         try{
             setError("")
             setLoading(true)
-            signInWithEmailAndPassword(auth,emailRef.current.value,passwordRef.current.value)
+            await signInWithEmailAndPassword(auth,emailRef.current.value,passwordRef.current.value)
             history.push("/")
         } catch{
             setError('Sign in Failed')
