@@ -17,6 +17,7 @@ install_dependencies:
     paths:
       - node_modules/
 
+
 bundle_app:
   stage: build
   script:
